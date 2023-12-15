@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-15T05:18:56.667Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="SrUZxp2Q-DTgRAePzwK3" version="22.1.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-15T05:27:24.381Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="5HQokWm331Qrh-B3LZ3U" version="22.1.8" type="github">
   <diagram name="第 1 页" id="kE6YA1kqH45rm807MT5q">
     <mxGraphModel dx="1050" dy="565" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -329,9 +329,6 @@
         <mxCell id="mbZ_QFg-wYkAnnuhmmOM-95" value="初始化获取磁盘请求序列,以及初始磁头位置" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="409.38" y="3370" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-98" target="mbZ_QFg-wYkAnnuhmmOM-100">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="mbZ_QFg-wYkAnnuhmmOM-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-98" target="mbZ_QFg-wYkAnnuhmmOM-102">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="469.19" y="3690" as="targetPoint" />
@@ -341,6 +338,9 @@
               <mxPoint x="471" y="3710" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-98" target="mbZ_QFg-wYkAnnuhmmOM-104">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="mbZ_QFg-wYkAnnuhmmOM-98" value="当请求序列不为空时,遍历序列,计算需要移动的磁道数并同步更新磁头位置" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="409.85" y="3470" width="120" height="60" as="geometry" />
@@ -364,6 +364,15 @@
         </mxCell>
         <mxCell id="mbZ_QFg-wYkAnnuhmmOM-103" value="结束" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="452.65" y="3830" width="33.46" height="33.46" as="geometry" />
+        </mxCell>
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-104" target="mbZ_QFg-wYkAnnuhmmOM-100">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-104" value="遍历请求序列,定义差值=abs(请求-磁头位置),如果差值&amp;lt;最小差值就记录" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="409.85" y="3550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-107" value="&lt;h1&gt;电梯算法&lt;/h1&gt;&lt;div&gt;&lt;div&gt;过程 电梯算法(请求序列, 当前磁头位置, 移动方向):&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 左侧队列 = 空队列()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 右侧队列 = 空队列()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 对于 每个请求 in 请求序列:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 如果 请求 &amp;lt; 当前磁头位置:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 将 请求 加入 左侧队列&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 否则 如果 请求 &amp;gt; 当前磁头位置:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 将 请求 加入 右侧队列&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 左侧队列 = 升序排序(左侧队列)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 右侧队列 = 降序排序(右侧队列)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 如果 移动方向 == 0:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 将 左侧队列 合并到 右侧队列&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 返回 右侧队列&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 否则:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 将 右侧队列 合并到 左侧队列&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 返回 左侧队列&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="45" y="4100" width="190" height="360" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
