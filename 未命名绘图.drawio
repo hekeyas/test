@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-15T05:27:24.381Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="5HQokWm331Qrh-B3LZ3U" version="22.1.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-15T06:17:46.625Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="LHLZbgutTep3GrVzrs9D" version="22.1.8" type="github">
   <diagram name="第 1 页" id="kE6YA1kqH45rm807MT5q">
     <mxGraphModel dx="1050" dy="565" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -78,95 +78,95 @@
         <mxCell id="1HQhPPLRjaLAviWX8HrD-28" value="&lt;h1&gt;最先适应算法&lt;/h1&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;开始&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;初始化变量：pid, size&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;对于每个内存块 i 从 0 到 memory.size() - 1：&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp; &amp;nbsp; 初始化变量：temp = 0&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp; &amp;nbsp; 对于每个内存块 j 从 i 到 memory.size() - 1：&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 如果 memory[j] 等于 -1：&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 增加 temp 的值&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 否则：&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 跳出循环&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp; &amp;nbsp; 如果 temp 大于等于 size：&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 返回 i&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;返回 -1&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;结束&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="30" y="150" width="220" height="390" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-2" value="&lt;h1&gt;最佳适应算法&lt;/h1&gt;&lt;p&gt;开始&lt;/p&gt;&lt;p&gt;初始化变量：pid, size, bestFitIndex = -1, bestFitSize = INT_MAX&lt;/p&gt;&lt;p&gt;对于每个内存块 i 从 0 到 memory.size() - 1：&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; 初始化变量：temp = 0&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; 对于每个内存块 j 从 i 到 memory.size() - 1：&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 如果 memory[j] 等于 -1：&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 增加 temp 的值&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 否则：&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 跳出循环&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; 如果 temp &amp;gt;= size 且 temp &amp;lt; bestFitSize：&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 更新 bestFitSize 和 bestFitIndex&lt;/p&gt;&lt;p&gt;如果 bestFitIndex 不等于 -1：&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; 返回 bestFitIndex&lt;/p&gt;&lt;p&gt;否则：&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; 返回 -1&amp;nbsp; // 未找到适应分区&lt;/p&gt;&lt;p&gt;结束&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-2" value="&lt;h1&gt;最佳适应算法&lt;/h1&gt;&lt;p&gt;开始&lt;/p&gt;&lt;p&gt;初始化变量：pid, size, bestFitIndex = -1, bestFitSize = INT_MAX&lt;/p&gt;&lt;p&gt;对于每个内存块 i 从 0 到 memory.size() - 1：&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; 初始化变量：temp = 0&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; 对于每个内存块 j 从 i 到 memory.size() - 1：&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 如果 memory[j] 等于 -1：&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 增加 temp 的值&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 否则：&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 跳出循环&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; 如果 temp &amp;gt;= size 且 temp &amp;lt; bestFitSize：&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 更新 bestFitSize 和 bestFitIndex&lt;/p&gt;&lt;p&gt;如果 bestFitIndex 不等于 -1：&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; 返回 bestFitIndex&lt;/p&gt;&lt;p&gt;否则：&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; 返回 -1&amp;nbsp; // 未找到适应分区&lt;/p&gt;&lt;p&gt;结束&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="45" y="800" width="190" height="580" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-4" target="mbZ_QFg-wYkAnnuhmmOM-8">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-4" target="mbZ_QFg-wYkAnnuhmmOM-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-4" value="开始" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-4" value="开始" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="420" y="790" width="50" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-11" target="mbZ_QFg-wYkAnnuhmmOM-9">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-11" target="mbZ_QFg-wYkAnnuhmmOM-9" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="505" y="1010" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-6" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mbZ_QFg-wYkAnnuhmmOM-5">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-6" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="mbZ_QFg-wYkAnnuhmmOM-5" vertex="1" connectable="0">
           <mxGeometry x="-0.5421" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-8">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-8" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="445" y="980" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-8" value="读取变量pid,以及size,同时设置一个bestFitSize,以及bestFitIndex用来存储内存中最合适的存储块" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-8" value="读取变量pid,以及size,同时设置一个bestFitSize,以及bestFitIndex用来存储内存中最合适的存储块" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="350" y="870" width="190" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-9" value="失败" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-9" value="失败" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="590" y="1390" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-11" target="mbZ_QFg-wYkAnnuhmmOM-13">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-11" target="mbZ_QFg-wYkAnnuhmmOM-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-11" value="判断pid是否重复" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-11" value="判断pid是否重复" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="397.5" y="980" width="95" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-13" value="依次遍历memeory,找到一块连续的空的内存空间" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-13" value="依次遍历memeory,找到一块连续的空的内存空间" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="385" y="1090" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-19" target="mbZ_QFg-wYkAnnuhmmOM-20">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-19" target="mbZ_QFg-wYkAnnuhmmOM-20" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="444" y="1405" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-35" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mbZ_QFg-wYkAnnuhmmOM-16">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-35" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="mbZ_QFg-wYkAnnuhmmOM-16" vertex="1" connectable="0">
           <mxGeometry x="-0.36" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-19" target="mbZ_QFg-wYkAnnuhmmOM-9">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-19" target="mbZ_QFg-wYkAnnuhmmOM-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-34" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mbZ_QFg-wYkAnnuhmmOM-17">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-34" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="mbZ_QFg-wYkAnnuhmmOM-17" vertex="1" connectable="0">
           <mxGeometry x="-0.124" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-19" value="判断长度是否大于psize" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-19" value="判断长度是否大于psize" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="397.5" y="1370" width="92.5" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-20" value="成功" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-20" value="成功" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="428.12" y="1480" width="33.75" height="33.75" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-21" target="mbZ_QFg-wYkAnnuhmmOM-23">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-21" target="mbZ_QFg-wYkAnnuhmmOM-23" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-27" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mbZ_QFg-wYkAnnuhmmOM-25">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-27" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="mbZ_QFg-wYkAnnuhmmOM-25" vertex="1" connectable="0">
           <mxGeometry x="-0.1467" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-21" target="mbZ_QFg-wYkAnnuhmmOM-13">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-21" target="mbZ_QFg-wYkAnnuhmmOM-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-29" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mbZ_QFg-wYkAnnuhmmOM-28">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-29" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="mbZ_QFg-wYkAnnuhmmOM-28" vertex="1" connectable="0">
           <mxGeometry x="0.1558" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-21" value="temp&amp;lt;maxperiod&lt;br&gt;period&amp;gt;size" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-21" value="temp&amp;lt;maxperiod&lt;br&gt;period&amp;gt;size" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="377.2" y="1180" width="133.12" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-23" target="mbZ_QFg-wYkAnnuhmmOM-13">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-23" target="mbZ_QFg-wYkAnnuhmmOM-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-23" value="maxperiod = period;&lt;br&gt;address=period_add" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-23" value="maxperiod = period;&lt;br&gt;address=period_add" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="383.75" y="1270" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.433;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-13" target="mbZ_QFg-wYkAnnuhmmOM-19">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.433;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-13" target="mbZ_QFg-wYkAnnuhmmOM-19" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="560" y="1105" />
@@ -175,100 +175,100 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-31" value="遍历结束后" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mbZ_QFg-wYkAnnuhmmOM-30">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-31" value="遍历结束后" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="mbZ_QFg-wYkAnnuhmmOM-30" vertex="1" connectable="0">
           <mxGeometry x="-0.0033" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-37" value="&lt;h1&gt;最坏适应算法&lt;/h1&gt;&lt;div&gt;&lt;div&gt;开始&lt;/div&gt;&lt;div&gt;初始化变量：pid, size, worstFitIndex = -1, worstFitSize = -1&lt;/div&gt;&lt;div&gt;对于每个内存块 i 从 0 到 memory.size() - 1：&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 初始化变量：temp = 0&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 对于每个内存块 j 从 i 到 memory.size() - 1：&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 如果 memory[j] 等于 -1：&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 增加 temp 的值&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 否则：&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 跳出循环&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 如果 temp &amp;gt;= size 且 temp &amp;gt; worstFitSize：&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 更新 worstFitSize 和 worstFitIndex&lt;/div&gt;&lt;div&gt;如果 worstFitIndex 不等于 -1：&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 返回 worstFitIndex&lt;/div&gt;&lt;div&gt;否则：&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 返回 -1&amp;nbsp; // 未找到适应分区&lt;/div&gt;&lt;div&gt;结束&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-37" value="&lt;h1&gt;最坏适应算法&lt;/h1&gt;&lt;div&gt;&lt;div&gt;开始&lt;/div&gt;&lt;div&gt;初始化变量：pid, size, worstFitIndex = -1, worstFitSize = -1&lt;/div&gt;&lt;div&gt;对于每个内存块 i 从 0 到 memory.size() - 1：&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 初始化变量：temp = 0&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 对于每个内存块 j 从 i 到 memory.size() - 1：&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 如果 memory[j] 等于 -1：&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 增加 temp 的值&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 否则：&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 跳出循环&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 如果 temp &amp;gt;= size 且 temp &amp;gt; worstFitSize：&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 更新 worstFitSize 和 worstFitIndex&lt;/div&gt;&lt;div&gt;如果 worstFitIndex 不等于 -1：&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 返回 worstFitIndex&lt;/div&gt;&lt;div&gt;否则：&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 返回 -1&amp;nbsp; // 未找到适应分区&lt;/div&gt;&lt;div&gt;结束&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="30" y="1650" width="190" height="380" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-39" target="mbZ_QFg-wYkAnnuhmmOM-43">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-39" target="mbZ_QFg-wYkAnnuhmmOM-43" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-39" value="开始" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-39" value="开始" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="433.46" y="1640" width="50" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-46" target="mbZ_QFg-wYkAnnuhmmOM-44">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-46" target="mbZ_QFg-wYkAnnuhmmOM-44" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="518.46" y="1860" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-41" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mbZ_QFg-wYkAnnuhmmOM-40">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-41" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="mbZ_QFg-wYkAnnuhmmOM-40" vertex="1" connectable="0">
           <mxGeometry x="-0.5421" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-43">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-43" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="458.46" y="1830" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-43" value="读取变量pid,以及size,同时设置一个worstFitSize,以及worstFitIndex用来存储内存中最不合适的存储块" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-43" value="读取变量pid,以及size,同时设置一个worstFitSize,以及worstFitIndex用来存储内存中最不合适的存储块" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="340" y="1720" width="240" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-44" value="失败" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-44" value="失败" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="603.46" y="2240" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-46" target="mbZ_QFg-wYkAnnuhmmOM-47">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-46" target="mbZ_QFg-wYkAnnuhmmOM-47" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-46" value="判断pid是否重复" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-46" value="判断pid是否重复" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="410.96" y="1830" width="95" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-47" value="依次遍历memeory,找到一块连续的空的内存空间" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-47" value="依次遍历memeory,找到一块连续的空的内存空间" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="398.46" y="1940" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-52" target="mbZ_QFg-wYkAnnuhmmOM-53">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-52" target="mbZ_QFg-wYkAnnuhmmOM-53" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="457.46" y="2255" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-49" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mbZ_QFg-wYkAnnuhmmOM-48">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-49" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="mbZ_QFg-wYkAnnuhmmOM-48" vertex="1" connectable="0">
           <mxGeometry x="-0.36" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-52" target="mbZ_QFg-wYkAnnuhmmOM-44">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-52" target="mbZ_QFg-wYkAnnuhmmOM-44" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-51" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mbZ_QFg-wYkAnnuhmmOM-50">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-51" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="mbZ_QFg-wYkAnnuhmmOM-50" vertex="1" connectable="0">
           <mxGeometry x="-0.124" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-52" value="判断长度是否大于psize" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-52" value="判断长度是否大于psize" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="410.96" y="2220" width="92.5" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-53" value="成功" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-53" value="成功" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="441.58" y="2330" width="33.75" height="33.75" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-58" target="mbZ_QFg-wYkAnnuhmmOM-60">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-58" target="mbZ_QFg-wYkAnnuhmmOM-60" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-55" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mbZ_QFg-wYkAnnuhmmOM-54">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-55" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="mbZ_QFg-wYkAnnuhmmOM-54" vertex="1" connectable="0">
           <mxGeometry x="-0.1467" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-58" target="mbZ_QFg-wYkAnnuhmmOM-47">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-58" target="mbZ_QFg-wYkAnnuhmmOM-47" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-57" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mbZ_QFg-wYkAnnuhmmOM-56">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-57" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="mbZ_QFg-wYkAnnuhmmOM-56" vertex="1" connectable="0">
           <mxGeometry x="0.1558" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-58" value="period&amp;gt;maxperiod&lt;br&gt;period&amp;gt;size" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-58" value="period&amp;gt;maxperiod&lt;br&gt;period&amp;gt;size" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="390.65999999999997" y="2030" width="133.12" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-60" target="mbZ_QFg-wYkAnnuhmmOM-47">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-60" target="mbZ_QFg-wYkAnnuhmmOM-47" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-60" value="maxperiod = period;&lt;br&gt;address=period_add" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-60" value="maxperiod = period;&lt;br&gt;address=period_add" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="397.21" y="2120" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.433;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-47" target="mbZ_QFg-wYkAnnuhmmOM-52">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.433;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-47" target="mbZ_QFg-wYkAnnuhmmOM-52" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="573.46" y="1955" />
@@ -277,59 +277,59 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-62" value="遍历结束后" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mbZ_QFg-wYkAnnuhmmOM-61">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-62" value="遍历结束后" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="mbZ_QFg-wYkAnnuhmmOM-61" vertex="1" connectable="0">
           <mxGeometry x="-0.0033" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-63" value="&lt;h1&gt;最短寻道时间优先&lt;/h1&gt;&lt;div&gt;&lt;div&gt;过程 最短寻道时间优先(请求序列, 当前磁头位置):&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 结果队列 = 空队列()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 当 请求序列 不为空:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 最小差值索引 = -1&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 最小差值 = 无穷大&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 对于 每个请求 in 请求序列:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 差值 = abs(请求 - 当前磁头位置)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 如果 差值 &amp;lt; 最小差值:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 最小差值 = 差值&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 最小差值索引 = 当前请求的索引&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 如果 最小差值索引 不为 -1:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 当前磁头位置 = 请求序列[最小差值索引]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 将当前请求加入 结果队列&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 从请求序列中移除当前请求&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 返回 结果队列&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-63" value="&lt;h1&gt;最短寻道时间优先&lt;/h1&gt;&lt;div&gt;&lt;div&gt;过程 最短寻道时间优先(请求序列, 当前磁头位置):&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 结果队列 = 空队列()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 当 请求序列 不为空:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 最小差值索引 = -1&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 最小差值 = 无穷大&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 对于 每个请求 in 请求序列:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 差值 = abs(请求 - 当前磁头位置)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 如果 差值 &amp;lt; 最小差值:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 最小差值 = 差值&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 最小差值索引 = 当前请求的索引&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 如果 最小差值索引 不为 -1:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 当前磁头位置 = 请求序列[最小差值索引]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 将当前请求加入 结果队列&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 从请求序列中移除当前请求&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 返回 结果队列&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="60" y="3350" width="205" height="400" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-64" target="mbZ_QFg-wYkAnnuhmmOM-65">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-64" target="mbZ_QFg-wYkAnnuhmmOM-65" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-64" value="开始" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-64" value="开始" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="433.46" y="2550" width="33.46" height="33.46" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-65" target="mbZ_QFg-wYkAnnuhmmOM-66">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-65" target="mbZ_QFg-wYkAnnuhmmOM-66" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-65" value="初始化获取磁盘请求序列,以及初始磁头位置" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-65" value="初始化获取磁盘请求序列,以及初始磁头位置" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="390.19" y="2600" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-66">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-66" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="450.19000000000005" y="2790" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-66" value="遍历序列,计算需要移动的磁道数并同步更新磁头位置" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-66" value="遍历序列,计算需要移动的磁道数并同步更新磁头位置" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="390.66" y="2700" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-75" target="mbZ_QFg-wYkAnnuhmmOM-77">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-75" target="mbZ_QFg-wYkAnnuhmmOM-77" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-75" value="返回输出序列" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-75" value="返回输出序列" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="390.65999999999997" y="2790" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-77" value="结束" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-77" value="结束" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="436.54" y="2889" width="33.46" height="33.46" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-79" value="&lt;h1&gt;先来先服务&lt;/h1&gt;&lt;div&gt;&lt;div&gt;过程 先来先服务(请求序列, 当前磁头位置):&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 总磁道移动数 = 0&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 对于 每个请求 in 请求序列:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 磁头移动距离 = abs(请求 - 当前磁头位置)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 总磁道移动数 += 磁头移动距离&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 当前磁头位置 = 请求&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 返回 总磁道移动数&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-79" value="&lt;h1&gt;先来先服务&lt;/h1&gt;&lt;div&gt;&lt;div&gt;过程 先来先服务(请求序列, 当前磁头位置):&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 总磁道移动数 = 0&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 对于 每个请求 in 请求序列:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 磁头移动距离 = abs(请求 - 当前磁头位置)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 总磁道移动数 += 磁头移动距离&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 当前磁头位置 = 请求&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 返回 总磁道移动数&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="90" y="2600" width="190" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-93" target="mbZ_QFg-wYkAnnuhmmOM-95">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-93" target="mbZ_QFg-wYkAnnuhmmOM-95" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-93" value="开始" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-93" value="开始" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="452.65" y="3320" width="33.46" height="33.46" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-95" target="mbZ_QFg-wYkAnnuhmmOM-98">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-95" target="mbZ_QFg-wYkAnnuhmmOM-98" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-95" value="初始化获取磁盘请求序列,以及初始磁头位置" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-95" value="初始化获取磁盘请求序列,以及初始磁头位置" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="409.38" y="3370" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-98" target="mbZ_QFg-wYkAnnuhmmOM-102">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-98" target="mbZ_QFg-wYkAnnuhmmOM-102" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="469.19" y="3690" as="targetPoint" />
             <Array as="points">
@@ -339,13 +339,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-98" target="mbZ_QFg-wYkAnnuhmmOM-104">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-98" target="mbZ_QFg-wYkAnnuhmmOM-104" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-98" value="当请求序列不为空时,遍历序列,计算需要移动的磁道数并同步更新磁头位置" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-98" value="当请求序列不为空时,遍历序列,计算需要移动的磁道数并同步更新磁头位置" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="409.85" y="3470" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-100" target="mbZ_QFg-wYkAnnuhmmOM-98">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-100" target="mbZ_QFg-wYkAnnuhmmOM-98" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="630" y="3660" />
@@ -353,26 +353,59 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-100" value="删除已经服务过的请求索引,并将其插入待输出序列" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-100" value="删除已经服务过的请求索引,并将其插入待输出序列" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="409.38" y="3630" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-102" target="mbZ_QFg-wYkAnnuhmmOM-103">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-102" target="mbZ_QFg-wYkAnnuhmmOM-103" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-102" value="返回输出序列" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-102" value="返回输出序列" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="410.9599999999999" y="3740" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-103" value="结束" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-103" value="结束" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="452.65" y="3830" width="33.46" height="33.46" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-104" target="mbZ_QFg-wYkAnnuhmmOM-100">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mbZ_QFg-wYkAnnuhmmOM-104" target="mbZ_QFg-wYkAnnuhmmOM-100" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-104" value="遍历请求序列,定义差值=abs(请求-磁头位置),如果差值&amp;lt;最小差值就记录" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-104" value="遍历请求序列,定义差值=abs(请求-磁头位置),如果差值&amp;lt;最小差值就记录" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="409.85" y="3550" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-107" value="&lt;h1&gt;电梯算法&lt;/h1&gt;&lt;div&gt;&lt;div&gt;过程 电梯算法(请求序列, 当前磁头位置, 移动方向):&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 左侧队列 = 空队列()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 右侧队列 = 空队列()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 对于 每个请求 in 请求序列:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 如果 请求 &amp;lt; 当前磁头位置:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 将 请求 加入 左侧队列&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 否则 如果 请求 &amp;gt; 当前磁头位置:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 将 请求 加入 右侧队列&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 左侧队列 = 升序排序(左侧队列)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 右侧队列 = 降序排序(右侧队列)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 如果 移动方向 == 0:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 将 左侧队列 合并到 右侧队列&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 返回 右侧队列&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 否则:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 将 右侧队列 合并到 左侧队列&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 返回 左侧队列&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="mbZ_QFg-wYkAnnuhmmOM-107" value="&lt;h1&gt;电梯算法&lt;/h1&gt;&lt;div&gt;&lt;div&gt;过程 电梯算法(请求序列, 当前磁头位置, 移动方向):&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 左侧队列 = 空队列()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 右侧队列 = 空队列()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 对于 每个请求 in 请求序列:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 如果 请求 &amp;lt; 当前磁头位置:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 将 请求 加入 左侧队列&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 否则 如果 请求 &amp;gt; 当前磁头位置:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 将 请求 加入 右侧队列&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 左侧队列 = 升序排序(左侧队列)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 右侧队列 = 降序排序(右侧队列)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 如果 移动方向 == 0:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 将 左侧队列 合并到 右侧队列&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 返回 右侧队列&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; 否则:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 将 右侧队列 合并到 左侧队列&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 返回 左侧队列&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="45" y="4100" width="190" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="lAXVZZtbg28NG17KGiAG-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="lAXVZZtbg28NG17KGiAG-2" target="lAXVZZtbg28NG17KGiAG-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lAXVZZtbg28NG17KGiAG-2" value="开始" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="396.27" y="4087.54" width="33.46" height="33.46" as="geometry" />
+        </mxCell>
+        <mxCell id="lAXVZZtbg28NG17KGiAG-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="lAXVZZtbg28NG17KGiAG-4" target="lAXVZZtbg28NG17KGiAG-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lAXVZZtbg28NG17KGiAG-4" value="初始化获取磁盘请求序列,以及初始磁头位置" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="353" y="4137.54" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lAXVZZtbg28NG17KGiAG-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="lAXVZZtbg28NG17KGiAG-6" target="lAXVZZtbg28NG17KGiAG-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lAXVZZtbg28NG17KGiAG-6" value="遍历序列,将请求序列依照磁头位置分成两半" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="353.47" y="4210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lAXVZZtbg28NG17KGiAG-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="lAXVZZtbg28NG17KGiAG-8" target="lAXVZZtbg28NG17KGiAG-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lAXVZZtbg28NG17KGiAG-8" value="返回输出序列" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="352.99999999999994" y="4350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lAXVZZtbg28NG17KGiAG-9" value="结束" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="399.35" y="4426.54" width="33.46" height="33.46" as="geometry" />
+        </mxCell>
+        <mxCell id="lAXVZZtbg28NG17KGiAG-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="lAXVZZtbg28NG17KGiAG-10" target="lAXVZZtbg28NG17KGiAG-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lAXVZZtbg28NG17KGiAG-10" value="对两串序列进行排序然后按照移动的方向对这两个顺序表,然后进行拼接." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="353" y="4280" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
